@@ -4,17 +4,18 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 import ScheduleList from '../Components/ScheduleList.js'
 
 export default class Home extends React.Component {
+
   render() {
     return (
      <Content>
         <Tabs>
-            <Tab heading="Tab1">
+            <Tab heading="Dia 1">
                 <ScheduleList />
             </Tab>
-            <Tab heading="Tab2">
+            <Tab heading="Dia 2">
                 <Text>tab 2</Text>
             </Tab>
-            <Tab heading="Tab3">
+            <Tab heading="Dia 3">
                 <Text>tab 3</Text>
             </Tab>
         </Tabs>
