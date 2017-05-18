@@ -1,31 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon } from 'native-base';
+import { Container, Header, Left, Button, Icon, Title, Body } from 'native-base';
 import Schedule from './Schedule.js';
+import FooterSection from '../Components/Footer.js';
+import HeaderSection from '../Components/Header.js';
 
 export default class Home extends React.Component {
+    
   render() {
     return (
       <Container>
-        <Header>
-            <Left>
-                <Button transparent>
-                    <Icon name='menu' />
-                </Button>
-            </Left>
-            <Body>
-                <Title>Congreso</Title>
-            </Body>
-            <Right />
-        </Header>
+        <HeaderSection/>
         <Schedule />
-        <Footer>
-            <FooterTab>
-                <Button full>
-                    <Text>Aspecive</Text>
-                </Button>
-            </FooterTab>
-        </Footer>
+        <FooterSection />
     </Container>
     );
   }

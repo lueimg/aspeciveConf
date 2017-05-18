@@ -7,7 +7,7 @@ export const dia1 = [
         {   
             type: 'row',
             hour: '08:00',
-            title: 'Comunicacion Oral Nro ...',
+            title: 'Comunicacion Oral Nro 2 ',
             speaker: 'Luis Mori',
             room: 'Limatambo 4, 5'
         },

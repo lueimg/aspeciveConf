@@ -2,21 +2,24 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Tab, Tabs, List, ListItem  } from 'native-base';
 
+import Row from './Row.js';
+import SeparatorRow from './SeparatorRow.js';
+import {dia1} from '../data.js';
+
 export default class ScheduleList extends React.Component {
+
   render() {
+    
+
     return (
      <Container>
         <Content>
             <List>
-                <ListItem >
-                    <Text>Simon Mignolet</Text>
-                </ListItem>
-                <ListItem>
-                    <Text>Nathaniel Clyne</Text>
-                </ListItem>
-                <ListItem>
-                    <Text>Dejan Lovren</Text>
-                </ListItem>
+                {dia1.map((item, index) => 
+                    item.type === 'separator' ? 
+                        <SeparatorRow key={index} item={item} /> : 
+                        <Row key={index} item={item} />
+                )}
             </List>
         </Content>
     </Container>
@@ -24,11 +27,3 @@ export default class ScheduleList extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

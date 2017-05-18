@@ -1,25 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Tab, Tabs  } from 'native-base';
+import { StyleSheet, View } from 'react-native';
+import { Container, Text, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Tab, Tabs  } from 'native-base';
 import ScheduleList from '../Components/ScheduleList.js'
 
 export default class Home extends React.Component {
 
   render() {
     return (
-     <Content>
+     <Container>
         <Tabs>
-            <Tab heading="Dia 1">
+            <Tab heading="Jue 7">
                 <ScheduleList />
             </Tab>
-            <Tab heading="Dia 2">
-                <Text>tab 2</Text>
+            <Tab heading="Vie 8">
+                <ScheduleList />
             </Tab>
-            <Tab heading="Dia 3">
-                <Text>tab 3</Text>
+            <Tab heading="Sab 9">
+                <ScheduleList />
             </Tab>
         </Tabs>
-     </Content>
+     </Container>
     );
   }
 }
