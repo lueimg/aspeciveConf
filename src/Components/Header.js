@@ -7,13 +7,9 @@ export default class HeaderSection extends React.Component {
   render() {
     return (
      <Header>
-        <Left>
-            <Button transparent>
-                <Icon name='menu' />
-            </Button>
-        </Left>
-        <Body>
-            <Title>III Congreso 2017</Title>
+       
+        <Body style={{flex: 1, justifyContent: 'center'}}>
+            <Title>III Congreso Cirugia Vertebral 2017</Title>
         </Body>
         
      </Header>

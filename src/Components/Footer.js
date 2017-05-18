@@ -17,15 +17,16 @@ export default class FooterSection extends React.Component {
             ...this.defaultTabs,
             tab1: true
         };
+
+        //this.toggleTab = this.toggleTab.bind(this);
     }
 
     toggleTab(tabName) {
         this.setState({
             ...this.defaultTabs,
             [tabName]: true
-        })
-        
-        
+        });
+        this.props.updateScreen(tabName);
     }
 
 
@@ -35,25 +36,25 @@ export default class FooterSection extends React.Component {
             <FooterTab>
                 <Button vertical  
                         active={this.state.tab1} 
-                        onPress={() => this.toggleTab('tab1')}>
+                        onPress={this.toggleTab.bind(this, 'tab1')}>
                     <Icon name="calendar" />
                     <Text>Programa</Text>
                 </Button>
                 <Button  vertical  
                         active={this.state.tab2} 
-                        onPress={() => this.toggleTab('tab2')}>
+                        onPress={this.toggleTab.bind(this, 'tab2')}>
                     <Icon name="mic" />
                     <Text>Ponentes</Text>
                 </Button>
                 <Button  vertical  
                         active={this.state.tab3} 
-                        onPress={() => this.toggleTab('tab3')}>
+                        onPress={this.toggleTab.bind(this, 'tab3')}>
                     <Icon name="person" />
                     <Text>Rooms</Text>
                 </Button>
                 <Button  vertical  
                         active={this.state.tab4} 
-                        onPress={() => this.toggleTab('tab4')}>
+                        onPress={this.toggleTab.bind(this, 'tab4')}>
                     <Icon active name="settings" />
                     <Text>Info</Text>
                 </Button>
