@@ -3,17 +3,17 @@ import {} from 'react-native';
 import {Container, Text, Content, List, ListItem, Left, Body, Right, Thumbnail } from 'native-base';
 import Expo from 'expo';
 
-import FooterSection from '../Components/Footer.js';
-import HeaderSection from '../Components/Header.js';
-
 export default class Speakers extends React.Component {
     
-    
+     watchDetails = () => {
+        this.props.navigation.navigate('speaker_details')
+    }
+
   render() {
     return (
         <Container>
                 <Content>
-                    <ListItem avatar>
+                    <ListItem avatar onPress={this.watchDetails}>
                         <Left>
                             <Thumbnail source={require('../img/contacts/atul.png')} />
                         </Left>

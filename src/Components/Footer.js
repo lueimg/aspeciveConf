@@ -40,24 +40,6 @@ export default class FooterSection extends React.Component {
                     <Icon name="calendar" />
                     <Text>Programa</Text>
                 </Button>
-                <Button  vertical  
-                        active={this.state.tab2} 
-                        onPress={this.toggleTab.bind(this, 'tab2')}>
-                    <Icon name="mic" />
-                    <Text>Ponentes</Text>
-                </Button>
-                <Button  vertical  
-                        active={this.state.tab3} 
-                        onPress={this.toggleTab.bind(this, 'tab3')}>
-                    <Icon name="person" />
-                    <Text>Rooms</Text>
-                </Button>
-                <Button  vertical  
-                        active={this.state.tab4} 
-                        onPress={this.toggleTab.bind(this, 'tab4')}>
-                    <Icon active name="settings" />
-                    <Text>Info</Text>
-                </Button>
                 
             </FooterTab>
         </Footer>

@@ -10,7 +10,6 @@ export default class ScheduleList extends React.Component {
 
   render() {
     
-
     return (
      <Container>
         <Content>
@@ -18,7 +17,7 @@ export default class ScheduleList extends React.Component {
                 {dia1.map((item, index) => 
                     item.type === 'separator' ? 
                         <SeparatorRow key={index} item={item} /> : 
-                        <Row key={index} item={item} />
+                        <Row key={index} item={item} nav={this.props.nav} />
                 )}
             </List>
         </Content>

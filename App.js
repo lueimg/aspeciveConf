@@ -1,33 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/Containers/Home.js';
-import Expo from 'expo';
+import { StackNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
+import MainScreen from './src/Containers/MainScreen.js';
+import ScheduleDetails from './src/Containers/ScheduleDetails.js';
+import SpeakerDetails from './src/Containers/SpeakerDetails.js';
 
-   constructor() {
-      super();
-      this.state = {
-        isLoading: false,
-        isReady: false,
-      };
-    }
 
-    async componentWillMount() {
-      await Expo.Font.loadAsync({
-        'Roboto': require('native-base/Fonts/Roboto.ttf'),
-        'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
-      });
-       this.setState({isReady: true});
+const App = StackNavigator({
+  // Get all the tabas
+  MainScreen: {
+    screen: MainScreen,
+  },
+  // after that we have to map all detail pages
+  schedule_detail: {
+    screen: ScheduleDetails,
+  },
+  speaker_details: {
+    screen: SpeakerDetails,
+  },
+});
 
-    }
-
-  render() {
-
-     if (!this.state.isReady) return <Expo.AppLoading />;
-
-    return (
-     <Home />
-    );
-  }
-}
+export default App;
