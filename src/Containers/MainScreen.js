@@ -8,7 +8,7 @@ import Schedule from './Schedule.js'
 import Speakers from './Speakers.js'
 import PostersScreen from './PostersScreen.js';
 import MasScreen from './MasScreen.js'
-
+// https://oblador.github.io/react-native-vector-icons/
 const colors = {
   white: "#fff",
   gold: '#B58926',
