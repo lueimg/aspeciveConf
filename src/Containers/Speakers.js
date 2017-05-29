@@ -13,13 +13,13 @@ export default class Speakers extends React.Component {
     return (
         <Container>
                 <Content>
-                    <ListItem avatar onPress={this.watchDetails}>
+                    <ListItem avatar>
                         <Left>
-                            <Thumbnail source={require('../img/contacts/atul.png')} />
+                            <Thumbnail source={require('../img/speakers/cauti.jpg')} />
                         </Left>
                         <Body>
-                            <Text>Kumar Pratik</Text>
-                            <Text note>Doing what you like will always keep you happy . .</Text>
+                            <Text>Dr. Daniel Cauti De la Cruz</Text>
+                            <Text note>Cirujano Ortopedico - Subespecialidad en columna vertebral</Text>
                         </Body>
                         <Right>
                            
@@ -27,11 +27,11 @@ export default class Speakers extends React.Component {
                     </ListItem>
                     <ListItem avatar>
                         <Left>
-                            <Thumbnail source={require('../img/contacts/atul.png')} />
+                            <Thumbnail source={require('../img/speakers/laos.jpg')} />
                         </Left>
                         <Body>
-                            <Text>Kumar Pratik</Text>
-                            <Text note>Doing what you like will always keep you happy . .</Text>
+                            <Text>Dr. Eduardo J. Laos Plasier</Text>
+                            <Text note>Medico Neurocirujano</Text>
                         </Body>
                         <Right>
                            
@@ -39,11 +39,11 @@ export default class Speakers extends React.Component {
                     </ListItem>
                     <ListItem avatar>
                         <Left>
-                            <Thumbnail source={require('../img/contacts/atul.png')} />
+                            <Thumbnail source={require('../img/speakers/pascual.jpg')} />
                         </Left>
                         <Body>
-                            <Text>Kumar Pratik</Text>
-                            <Text note>Doing what you like will always keep you happy . .</Text>
+                            <Text>Dr. Ronald Pascual Valverde.</Text>
+                            <Text note>Medico Cirujano</Text>
                         </Body>
                         <Right>
                            

@@ -43,11 +43,17 @@ const ANDtabBarOptions = {
   },
 }
 
+const defaultHeaderStyles = {
+  paddingTop: 20
+}
+
+
 
 const MainScreen = TabNavigator({
   Agenda: { 
     screen: Schedule,
     navigationOptions: {
+      headerStyle: defaultHeaderStyles,
       title: 'Agenda',
       tabBarIcon: ({ tintColor, focused }) => (
         <Ionicons
@@ -62,6 +68,7 @@ const MainScreen = TabNavigator({
   Ponentes: { 
     screen: Speakers,
     navigationOptions: {
+      headerStyle: defaultHeaderStyles,
       title: 'Ponentes',
       tabBarIcon: ({ tintColor, focused }) => (
         <Ionicons
@@ -73,10 +80,10 @@ const MainScreen = TabNavigator({
     }
   },
 
-  Posters: {
+  Sponsors: {
     screen: PostersScreen,
     navigationOptions: {
-      title: 'Posters',
+      title: 'Sponsors',
       tabBarIcon: ({ tintColor, focused }) => (
         <Ionicons
           name="ios-link"

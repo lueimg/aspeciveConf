@@ -16,7 +16,7 @@ export default class PostersScreen extends React.Component {
                     <ListItem avatar >
                        
                         <Body>
-                            <Text>Abut</Text>
+                            <Text>Acerca de Aspecive</Text>
                         </Body>
                         
                     </ListItem>
@@ -30,14 +30,14 @@ export default class PostersScreen extends React.Component {
                     <ListItem avatar >
                        
                         <Body>
-                            <Text>About App</Text>
+                            <Text>Acerca de la  App</Text>
                         </Body>
                         
                     </ListItem>
                     <ListItem avatar >
                        
                         <Body>
-                            <Text>Pagina web Aspecive</Text>
+                            <Text>Web Aspecive</Text>
                         </Body>
                         
                     </ListItem>
