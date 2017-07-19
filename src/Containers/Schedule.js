@@ -10,7 +10,7 @@ export default class Schedule extends React.Component {
     return (
      <Container>
         <Tabs >
-            <Tab heading="Jue 7" tabStyle={styles.tab} activeTabStyle={styles.activeTab} >
+            <Tab heading="Jue" tabStyle={styles.tab} activeTabStyle={styles.activeTab} >
                 <ScheduleList nav={ this.props.navigation } />
             </Tab>
             <Tab heading="Vie 8" tabStyle={styles.tab} activeTabStyle={styles.activeTab} >

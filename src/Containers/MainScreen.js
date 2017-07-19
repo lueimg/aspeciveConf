@@ -9,19 +9,12 @@ import Speakers from './Speakers.js'
 import PostersScreen from './PostersScreen.js';
 import MasScreen from './MasScreen.js'
 // https://oblador.github.io/react-native-vector-icons/
-const colors = {
-  white: "#fff",
-  gold: '#B58926',
-  blue: '#001B31', // #031353
-  blue2: '#031353',
-  skyblue: '#A2C3CA',
-  gray: '#989596'
-}
 
+import colors from '../colors.js';
 
 const defaultValues = {
   activeTintColor: colors.white,
-  activeBackgroundColor: colors.gold
+  activeBackgroundColor: colors.blue2
 }
 
 const IOSTabBarOptions = {
@@ -31,20 +24,23 @@ const IOSTabBarOptions = {
 const ANDtabBarOptions = {
   ...defaultValues,
   style: {
-    backgroundColor: colors.white
+    backgroundColor: colors.gray
   },
   labelStyle: {
-    color: '#001E35',
+    color: colors.white,
     fontSize: 10,
   },
   
   indicatorStyle: {
-    backgroundColor: '#d9bf83',
+    backgroundColor: colors.white
   },
 }
 
 const defaultHeaderStyles = {
-  paddingTop: 20
+  paddingTop: 30,
+  height: 70,
+  shadowColor: 'transparent',
+  border: 'none'
 }
 
 
