@@ -25,15 +25,15 @@ const IOSTabBarOptions = {
 const ANDtabBarOptions = {
   ...defaultValues,
   style: {
-    backgroundColor: colors.gray
+    backgroundColor: colors.blue
   },
   labelStyle: {
-    color: colors.blue,
+    color: colors.white,
     fontSize: 10,
   },
   
   indicatorStyle: {
-    backgroundColor: colors.blue
+    backgroundColor: colors.white
   },
 }
 
