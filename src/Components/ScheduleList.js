@@ -6,7 +6,7 @@ import Row from './Row.js';
 import SeparatorRow from './SeparatorRow.js';
 import {dia1} from '../data.js';
 
-export default class ScheduleList extends React.Component {
+export default class ScheduleList extends React.PureComponent {
 
   render() {
     

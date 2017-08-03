@@ -1,36 +1,54 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Container, Text, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Tab, Tabs  } from 'native-base';
+import { Container, Tabs, Tab } from 'native-base';
 import ScheduleList from '../Components/ScheduleList.js'
-import Colors from '../colors.js';
+import { Header } from '../Components/custom-components';
+import { gold, blue, skyblue, gray, white } from '../colors.js';
 
-export default class Schedule extends React.Component {
-
-  render() {
-    return (
-     <Container>
-        <Tabs >
-            <Tab heading="Jue" tabStyle={styles.tab} activeTabStyle={styles.activeTab} >
-                <ScheduleList nav={ this.props.navigation } />
-            </Tab>
-            <Tab heading="Vie 8" tabStyle={styles.tab} activeTabStyle={styles.activeTab} >
-                <ScheduleList  nav={ this.props.navigation } />
-            </Tab>
-            <Tab heading="Sab 9" tabStyle={styles.tab} activeTabStyle={styles.activeTab} >
-                <ScheduleList  nav={ this.props.navigation } />
-            </Tab>
-        </Tabs>
-     </Container>
-    );
-  }
-}
 
 const styles = {
-    tab: {
-        backgroundColor: '#fff'
+    tabs: {
+         tabBarUnderlineStyle: 
+         {
+            backgroundColor: blue 
+        }
     },
-    activeTab: {
-        backgroundColor: Colors.skyblue
+    tab: {
+        tabStyle: {
+            backgroundColor: white,
+        },
+        activeTabStyle: {
+            backgroundColor: white,
+        },
+        textStyle: {
+            color: blue
+        },
+        activeTextStyle: {
+            color: blue
+        },
+    }
 
+}
+
+export default class Schedule extends React.PureComponent {
+
+    render() {
+        return (
+            <Container>
+                <Header />
+                <Tabs {...styles.tabs}>
+                    <Tab heading="Jue 7" {...styles.tab}>
+                        <ScheduleList nav={this.props.navigation} />
+                    </Tab>
+                    <Tab heading="Vie 8" {...styles.tab} >
+                        <ScheduleList nav={this.props.navigation} />
+                    </Tab>
+                    <Tab heading="Sab 9"  {...styles.tab}>
+                        <ScheduleList nav={this.props.navigation} />
+                    </Tab>
+                </Tabs>
+            </Container>
+        );
     }
 }
+

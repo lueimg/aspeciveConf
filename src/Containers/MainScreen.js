@@ -11,10 +11,11 @@ import MasScreen from './MasScreen.js'
 // https://oblador.github.io/react-native-vector-icons/
 
 import colors from '../colors.js';
+import {gold, blue, skyblue, gray, white } from '../colors.js';
 
 const defaultValues = {
   activeTintColor: colors.white,
-  activeBackgroundColor: colors.blue2
+  activeBackgroundColor: colors.blue
 }
 
 const IOSTabBarOptions = {
@@ -27,12 +28,12 @@ const ANDtabBarOptions = {
     backgroundColor: colors.gray
   },
   labelStyle: {
-    color: colors.white,
+    color: colors.blue,
     fontSize: 10,
   },
   
   indicatorStyle: {
-    backgroundColor: colors.white
+    backgroundColor: colors.blue
   },
 }
 
@@ -44,20 +45,22 @@ const defaultHeaderStyles = {
 }
 
 
+const TabBarIconElement = (iconName) => ({ tintColor, focused }) => (
+        <Ionicons
+          name={iconName}
+          size={26}
+          style={{ color: tintColor }}
+        />
+      )
+
 
 const MainScreen = TabNavigator({
   Agenda: { 
     screen: Schedule,
     navigationOptions: {
       headerStyle: defaultHeaderStyles,
-      title: 'Agenda',
-      tabBarIcon: ({ tintColor, focused }) => (
-        <Ionicons
-          name="ios-calendar"
-          size={26}
-          style={{ color: tintColor }}
-        />
-      ),
+      title: 'otro',
+      tabBarIcon: TabBarIconElement('ios-calendar'),
     }
   },
 
@@ -66,13 +69,7 @@ const MainScreen = TabNavigator({
     navigationOptions: {
       headerStyle: defaultHeaderStyles,
       title: 'Ponentes',
-      tabBarIcon: ({ tintColor, focused }) => (
-        <Ionicons
-          name="ios-person"
-          size={26}
-          style={{ color: tintColor }}
-        />
-      ),
+      tabBarIcon: TabBarIconElement('ios-person'),
     }
   },
 
@@ -80,13 +77,7 @@ const MainScreen = TabNavigator({
     screen: PostersScreen,
     navigationOptions: {
       title: 'Sponsors',
-      tabBarIcon: ({ tintColor, focused }) => (
-        <Ionicons
-          name="ios-link"
-          size={26}
-          style={{ color: tintColor }}
-        />
-      ),
+      tabBarIcon: TabBarIconElement('ios-link'),
     }
   },
 
@@ -94,13 +85,7 @@ const MainScreen = TabNavigator({
     screen: MasScreen,
     navigationOptions: {
       title: 'Mas',
-      tabBarIcon: ({ tintColor, focused }) => (
-        <Ionicons
-          name="ios-more"
-          size={26}
-          style={{ color: tintColor }}
-        />
-      ),
+      tabBarIcon: TabBarIconElement('ios-more'),
     }
   },
 
